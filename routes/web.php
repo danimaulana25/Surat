@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dash', function () {
+    $breadcrumb = (object) [
+        'title' => 'Selamat Datang',
+        'list'  => ['Home', 'Welcome']
+    ];
+
+    $activeMenu = 'dashboard';
+
+    return view('dashboard', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+});
