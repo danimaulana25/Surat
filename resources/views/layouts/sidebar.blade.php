@@ -29,7 +29,7 @@
             <li class="nav-item">
                 <a href="{{ url('/stok') }}" class="nav-link {{ $activeMenu == 'stok' ? 'active' : '' }} ">
                     <i class="nav-icon far fa-folder-open"></i>
-                    <p>Kategori</p>
+                    <p>Kategori Surat</p>
                 </a>
             </li>
             <li class="nav-item">
