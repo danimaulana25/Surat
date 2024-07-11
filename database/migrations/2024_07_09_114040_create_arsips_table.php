@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('arsips', function (Blueprint $table) {
-            $table->id();
+            $table->id('arsip_id')->unique();
             $table->string('no_surat')->unique();
-            $table->foreignId('kategori_id')->constrained('kategoris');
+            $table->foreignId('ktgr_id')->references('kategori_id')->on('kategoris');
             $table->string('judul');
             $table->string('file');
             $table->date('tanggal_arsip');
