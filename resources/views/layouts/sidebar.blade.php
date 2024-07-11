@@ -1,6 +1,6 @@
 <div class="sidebar">
     <!-- SidebarSearch Form -->
-    <div class="form-inline mt-2">
+    {{-- <div class="form-inline mt-2">
         <div class="input-group" data-widget="sidebar-search">
             <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -9,6 +9,9 @@
                 </button>
             </div>
         </div>
+    </div> --}}
+    <div class="user-panel mt-1 pb-1 mb-1 d-flex">
+        <div class="info"><a href="{{ url('/') }}" class="d-block text-white">Ahmad Dani Maulana</a></div>
     </div>
     <!-- Sidebar Menu -->
     <nav class="mt-2">
@@ -21,19 +24,19 @@
             </li>
             <li class="nav-header">Menu</li>
             <li class="nav-item">
-                <a href="{{ url('/kategori') }}" class="nav-link {{ $activeMenu == 'kategori' ? 'active' : '' }} ">
+                <a href="{{ url('/arsip') }}" class="nav-link {{ $activeMenu == 'arsip' ? 'active' : '' }} ">
                     <i class="nav-icon far fa-bookmark"></i>
                     <p>Arsip</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/stok') }}" class="nav-link {{ $activeMenu == 'stok' ? 'active' : '' }} ">
+                <a href="{{ url('/kategori') }}" class="nav-link {{ $activeMenu == 'kategori' ? 'active' : '' }} ">
                     <i class="nav-icon far fa-folder-open"></i>
                     <p>Kategori Surat</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/barang') }}" class="nav-link {{ $activeMenu == 'barang' ? 'active' : '' }} ">
+                <a href="{{ url('/about') }}" class="nav-link {{ $activeMenu == 'about' ? 'active' : '' }} ">
                     <i class="nav-icon fas fa-exclamation-circle"></i>
                     <p>About</p>
                 </a>

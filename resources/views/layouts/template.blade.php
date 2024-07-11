@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Sertikom - Surat') }}</title>
 
+    <title>{{ $breadcrumb->title }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Untuk mengirimkan token Laravel CSRF pada setiap request ajax -->
 
@@ -93,7 +93,7 @@
     @stack('js')
     <!-- Digunakan untuk memanggil custom js dari perintah push('js') pada setiap masing-masing view -->
     <!-- AdminLTE for demo purpose -->
-    <script src="{{ asset('adminlte/dist/js/demo.js') }}"></script>
+    {{-- <script src="{{ asset('adminlte/dist/js/demo.js') }}"></script> --}}
 </body>
 
 </html>
